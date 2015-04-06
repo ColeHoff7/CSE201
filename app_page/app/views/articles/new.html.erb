@@ -1,0 +1,41 @@
+<h1>New Article</h1>
+
+<%= form_for :article, url:articles_path do |f| %>
+  <p>
+    <%= f.label :app_name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <!--   	#Maybe a scroll wheel -->
+  <p>
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </p>
+
+<!--   #I would like to make this a checklist -->
+  <p>
+    <%= f.label :stores %><br>
+    <%= f.text_area :stores %>
+  </p>
+
+  <p>
+    <%= f.label :developer %><br>
+    <%= f.text_field :developer %>
+  </p>
+
+  <p>
+    <%= f.label :newest_version %><br>
+    <%= f.text_field :version %>
+  </p>
+
+<!-- Will we want the same app that is on multiple stores to have a different page for each store? -->
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
