@@ -1,0 +1,45 @@
+<h1>New App</h1
+
+<%= form_for :article do |f| %>
+  <p>
+    <%= f.label :app_name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <!--   	#Maybe a scroll wheel -->
+  <p>
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </p>
+
+  <p>
+    <%= f.label :stores %><br>
+    <%= check_box_tag(:apple) %>
+    <%= label_tag(:apple, "Apple App Store") %><br>
+    <%= check_box_tag(:google) %>
+    <%= label_tag(:google, "Google Play Store") %><br>
+    <%= check_box_tag(:windows) %>
+    <%= label_tag(:windows, "Apple App Store") %><br>
+  </p>
+
+  <p>
+    <%= f.label :developer %><br>
+    <%= f.text_field :developer %>
+  </p>
+
+  <p>
+    <%= f.label :newest_version %><br>
+    <%= f.text_field :version %>
+  </p>
+
+<!-- Will we want the same app that is on multiple stores to have a different page for each store? -->
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
