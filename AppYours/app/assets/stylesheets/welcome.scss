@@ -1,27 +1,27 @@
 #top{
   background-color: #8F00B2;
-  background: -moz-linear-gradient(#8F00B2, #56006B); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#8F00B2, #56006B); /* Standard syntax */
+  background: -moz-linear-gradient(#8F00B2, #56006B); /* For Firefox 3.6 to 15 */;
+  background: linear-gradient(#8F00B2, #56006B); /* Standard syntax */;
   width: 100%;
-  height: 6.25em /*100px;*/
+  height: 6.25em /*100px;*/;
   color: white;
   display: inline-block;
-  margin-top:-1em/*-16px;*/
+  margin-top:-1em/*-16px;*/;
   -moz-box-shadow: 0 0 30px 5px black;
   -webkit-box-shadow: 0 0 30px 5px black;
   max-width:100%;
-  max-height: 6.25em /*100px;*/
-  margin-left:.438em /*-7px;*/
+  max-height: 6.25em /*100px;*/;
+  margin-left:.438em /*-7px;*/;
   overflow:hidden;
   position:absolute;
 }
 
-#log{ /*holds the login buttons*/
+#log{ /*holds the login buttons*/;
   display: inline-block;
   box-sizing:border-box;
   float: right;
-  margin-top:1.563em /*25px;*/
-  margin-right:1.25em /*20px;*/
+  margin-top:1.563em /*25px;*/;
+  margin-right:1.25em /*20px;*/;
   z-index: 20;
 }
 
@@ -36,7 +36,7 @@
 #login a{
   color: white;
   text-decoration: none;
-  font-size: 1.375em /*22px;*/
+  font-size: 1.375em /*22px;*/;
 }
 
 #login a:hover{
@@ -44,9 +44,9 @@
   text-shadow: 2px 2px #000000;
 }
 
-#search{ /*temporary search bar*/
-  height: 2.5em /*40px;*/
-  width: 31.25em /*500px;*/
+#search{ /*temporary search bar*/;
+  height: 2.5em /*40px;*/;
+  width: 31.25em /*500px;*/;
   background-color: white;
   display:inline-block;
   border-width: 1px;
@@ -55,13 +55,13 @@
   border-color: #000000;
   box-sizing:border-box;
   float: right;
-  margin-top: 2.188em /*35px;*/
+  margin-top: 2.188em /*35px;*/;
   margin-right: 25%;
 }
 
 #search p{
   float:left;
-  margin-top: .625em /*10px;*/
+  margin-top: .625em /*10px;*/;
   margin-left: .625em;
   color: gray;
 }
@@ -69,7 +69,7 @@
 #nav{
   display: inline-block;
   background-color:#56006B;
-  margin-top: 5em /*80px;*/
+  margin-top: 5em /*80px;*/;
   border-width: 2px;
   border-style: solid;
   border-color: black;
@@ -84,7 +84,7 @@
 }
 
 #nav li{
-  margin-bottom: 1.875em/*30px;*/
+  margin-bottom: 1.875em/*30px;*/;
 }
 
 #nav a{
@@ -109,10 +109,10 @@
 #hot{
   display: block;
   background-color:white;
-  width:93.75em /*1500px;*/
-  height:31.25em /*500px;*/
-  /*margin-top:200px;*/
-  /*margin-right:75px;*/
+  width:93.75em /*1500px;*/;
+  height:31.25em /*500px;*/;
+  /*margin-top:200px;*/;
+  /*margin-right:75px;*/;
   float:right;
   -moz-box-shadow: 0 0 30px 3px black;
   -webkit-box-shadow: 0 0 30px 3px black;
@@ -120,19 +120,19 @@
 
 #hot p{
   color: white;
-  font-size: 1.875em /*30px;*/
+  font-size: 1.875em /*30px;*/;
   position: absolute;
   font-style:italic;
-  margin-left: 3.125em /*50px;*/
-  margin-top: 1.375em /*22px;*/
+  margin-left: 3.125em /*50px;*/;
+  margin-top: 1.375em /*22px;*/;
 }
 
 #top2{
   background-color: #8F00B2;
-  background: -moz-linear-gradient(#8F00B2, #56006B); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#8F00B2, #56006B); /* Standard syntax */
-  width: 93.75em /*1500px;*/
-  height: 4.375em /*70px;*/
+  background: -moz-linear-gradient(#8F00B2, #56006B); /* For Firefox 3.6 to 15 */;
+  background: linear-gradient(#8F00B2, #56006B); /* Standard syntax */;
+  width: 93.75em /*1500px;*/;
+  height: 4.375em /*70px;*/;
   color: white;
   margin-top: 0 px;
   box-shadow: 0 3px 6px 1px #000000;
