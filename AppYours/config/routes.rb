@@ -1,6 +1,27 @@
 Rails.application.routes.draw do
 
+  get 'apps/index'
+
+  get 'apps/show'
+
+  get 'apps/new'
+
+  get 'apps/edit'
+
+  get 'apps/delete'
+
+  get 'apps/index'
+
+  get 'apps/show'
+
+  get 'apps/new'
+
+  get 'apps/edit'
+
+  get 'apps/delete'
+
   get 'welcome/index'
+  get '/welcome'=>'welcome#index'
 
   resources :apps
 
