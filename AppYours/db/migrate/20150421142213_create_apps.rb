@@ -20,6 +20,7 @@ class CreateApps < ActiveRecord::Migration
 	  t.string  :picture3
 	  t.string  :video
 	  t.text    :description
+	  t.string	:catagory
       t.timestamps null: false
     end
   end
