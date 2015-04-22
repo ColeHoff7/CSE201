@@ -40,6 +40,6 @@ class AppsController < ApplicationController
 
   private
     def apps_params
-      params.require(:apps).permit(:name, :description, :appl_plat, :appl_price, :appl_vers, :andr_plat, :andr_price, :andr_vers, :wind_plat, :wind_price, :wind_vers, :developer)
+      params.require(:apps).permit(:name, :description, :appl_plat, :appl_price, :appl_vers, :appl_store :andr_plat, :andr_price, :andr_vers, :andr_store :wind_plat, :wind_price, :wind_vers, :wind_store, :developer, :catagory)
     end
 end
