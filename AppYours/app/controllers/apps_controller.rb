@@ -6,8 +6,11 @@ class AppsController < ApplicationController
   def create
     @apps = App.new(apps_params)
 
-    @apps.save
-    redirect_to @apps
+    if @apps.save
+      redirect_to @apps
+    else
+      render 'new'
+    end
   end
 
   def index
@@ -19,6 +22,17 @@ class AppsController < ApplicationController
   end
 
   def edit
+    @apps = App.find(params[:id])
+  end
+
+  def update
+    @apps = App.find(params[:id])
+
+    if @apps.update(apps_params)
+      redirect_to @apps
+    else
+      render 'edit'
+    end
   end
 
   def delete

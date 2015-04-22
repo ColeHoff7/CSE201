@@ -4,12 +4,15 @@
 	<tr>
     <th>Name</th>
     <th>Description</th>
+     <th colspan="2"></th>
   </tr>
  
   <% @apps.each do |apps| %>
     <tr>
       <td><%= apps.name %></td>
       <td><%= apps.description %></td>
+      <td><%= link_to 'show', apps_path(apps) %></td>
+      <td><%= link_to 'Edit', apps_path(apps) %></td>
     </tr>
   <% end %>
 </table>
