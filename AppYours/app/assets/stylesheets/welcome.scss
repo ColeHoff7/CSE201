@@ -13,6 +13,7 @@
   max-height: 6.25em /*100px;*/;
   overflow:hidden;
   position:absolute;
+  left:0;
 }
 
 #log{ /*holds the login buttons*/;
@@ -68,15 +69,20 @@
 #nav{
   display: inline-block;
   background-color:#56006B;
-  margin-top: 5em /*80px;*/;
+  /*margin-top: 5em /*80px;*/;
   border-width: 2px;
   border-style: solid;
   border-color: black;
   padding:1.25em;
   z-index:1;
-  height:3000px;
+  /*height:3000px;*/
   float:left;
   width: 14em;
+  position: absolute;
+  top: 5em;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .subcats li{
@@ -170,7 +176,7 @@ body{
 
 #content{
   display: inline-block;
-  float: left;
   margin-top: 7em;
-  margin-left: 4em;
+  float: left;
+  margin-left: 20%;
 }
