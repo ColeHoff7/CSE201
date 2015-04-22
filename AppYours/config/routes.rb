@@ -1,20 +1,15 @@
 Rails.application.routes.draw do
 
-  get 'apps/index'
-  get 'apps/show'
-  get 'apps/new'
-  get 'apps/edit'
-  get 'apps/delete'
-  get 'apps/index'
-  get 'apps/show'
-  get 'apps/new'
-  get 'apps/edit'
-  get 'apps/delete'
-  get '/welcome/apps/new'=>'apps#new'
-  get '/welcome'=>'welcome#index'
-  get '/apps/new'=> 'apps#new'
-
   resources :apps
+
+  get 'apps/create'
+  get 'apps/index'
+  get 'apps/show'
+  get 'apps/new'
+  get 'apps/edit'
+  get 'apps/delete'
+
+  root 'welcome#index'
 
   #resource :apps
 
@@ -22,7 +17,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20150421142213) do
     t.string   "picture3"
     t.string   "video"
     t.text     "description"
-    t.string   "catagory"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

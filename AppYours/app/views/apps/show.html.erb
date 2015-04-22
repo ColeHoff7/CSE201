@@ -1,2 +1,35 @@
-<h1>Apps#show</h1>
-<p>Find me in app/views/apps/show.html.erb</p>
+<p>
+	<strong>App Name:</strong>
+	<%= @apps.name %>
+</p>
+
+<p>
+	<strong>Description:</strong>
+	<%= @apps.description %>
+</p>
+
+<p>
+	<strong>Apple Store:</strong>
+	<%= @apps.appl_plat %>
+	<%= @apps.appl_price %>
+	<%= @apps.appl_vers %>
+</p>
+
+<p>
+	<strong>Android Store:</strong>
+	<%= @apps.andr_plat %>
+	<%= @apps.andr_price %>
+	<%= @apps.andr_vers %>
+</p>
+
+<p>
+	<strong>Windows Store:</strong>
+	<%= @apps.wind_plat %>
+	<%= @apps.wind_price %>
+	<%= @apps.wind_vers %>
+</p>
+
+<p>
+	<strong>Developer:</strong>
+	<%= @apps.developer %>
+</p>

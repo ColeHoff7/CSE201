@@ -1,78 +1,106 @@
-<div id=top>
-  
-    <div id=log>
-      <ul id=login>
-        <li><a href="new">Submit New App</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Sign Up</a></li>
-      </ul>
-    </div>
-  
-    <div id=search>
-      <p>Search: </p>
-    </div>
-  </div>
 
-  <div id=nav>
-    <p> <strong>Navigation</strong> </p>
-    <ul id=cats>
-      <li><a href="#">iOS</a></li>
-      <li><a href="#">Android</a></li>
-      <li><a href="#">Windows</a></li>
+<div id=top>
+  <div id=log>
+    <ul id=login>
+      <li><a href="new">Submit New App</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Sign Up</a></li>
     </ul>
   </div>
+  
+  <div id=search>
+    <p>Search: </p>
+  </div>
+</div>
+
 
 <div id = content>
-<%= form_for :article do |f| %>
+  <%= form_for :apps, url: apps_path do |f| %>
   
-  <p>
-    <%= f.label :app_name %><br>
-    <%= f.text_field :name %>
-  </p>
+    <p>
+      <%= f.label :app_name %><br>
+      
+      <%= f.text_field :name %>
+    </p>
 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
+    <p>
+      <%= f.label :description %><br>
+      
+      <%= f.text_area :description %>
+    </p>
 
-  <!--   	#Maybe a scroll wheel -->
-  <p>
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </p>
+    <p>
+      <%= f.label :stores %><br>
 
-  <p>
-    <%= f.label :stores %><br>
-    <%= check_box_tag(:apple) %>
-    <%= label_tag(:apple, "Apple App Store") %><br>
-    <%= check_box_tag(:google) %>
-    <%= label_tag(:google, "Google Play Store") %><br>
-    <%= check_box_tag(:windows) %>
-    <%= label_tag(:windows, "Apple App Store") %><br>
-  </p>
+      <%= check_box_tag(:plat) %>
+        <%= label_tag(:appl_plat, "Apple App Store") %><br>
+      <%= f.label :price %>
+        <%= f.text_field :appl_price %><br>
+      <%= f.label :version %>
+        <%= f.text_field :appl_vers %><br>
+      <%= f.label :link %>
+        <%= url_field(:user, :appl_store) %><br>
+      <br>
+      <%= check_box_tag(:plat) %>
+        <%= label_tag(:andr_plat, "Google Play Store") %><br>
+      <%= f.label :price %>
+        <%= f.text_field :andr_price %><br>
+      <%= f.label :version %>
+        <%= f.text_field :andr_vers %><br>
+      <%= f.label :link %>
+        <%= url_field(:user, :andr_store) %><br>
+      <br>
+      <%= check_box_tag(:plat) %>
+        <%= label_tag(:wind_plat, "Windows Store") %><br>
+      <%= f.label :price %>
+        <%= f.text_field :wind_price %><br>
+      <%= f.label :version %>
+        <%= f.text_field :wind_vers %><br>
+      <%= f.label :link %>
+        <%= url_field(:user, :wind_store) %><br>
+    </p>
 
-  <p>
-    <%= f.label :developer %><br>
-    <%= f.text_field :developer %>
-  </p>
+    <p>
+      <%= f.label :developer %><br>
+      
+      <%= f.text_field :developer %>
+    </p>
 
-  <p>
-    <%= f.label :newest_version %><br>
-    <%= f.text_field :version %>
-  </p>
-
-  <p>
-    <%= radio_button_tag(:age, "child") %>
-    <%= label_tag(:age_child, "I am younger than 21") %>
-    <%= radio_button_tag(:age, "adult") %>
-    <%= label_tag(:age_adult, "I'm over 21") %>
-  </p>
-
-<!-- Will we want the same app that is on multiple stores to have a different page for each store? -->
-
+    <p>
+      <%= f.label :catagory %><br>
+      
+      <%= radio_button_tag(:catagory, "games") %>
+        <%= label_tag(:catagory_games, "Games") %>
+      <%= radio_button_tag(:catagory, "education") %>
+        <%= label_tag(:catagory_education, "Education") %>
+      <%= radio_button_tag(:catagory, "entertainment") %>
+        <%= label_tag(:catagory_entertainment, "Entertainment") %>
+      <%= radio_button_tag(:catagory, "food") %>
+        <%= label_tag(:catagory_food, "Food & Drink") %>
+      <%= radio_button_tag(:catagory, "health") %>
+        <%= label_tag(:catagory_health, "Health & Fitness") %>
+      <%= radio_button_tag(:catagory, "kids") %>
+        <%= label_tag(:catagory_kids, "Kids") %>
+      <%= radio_button_tag(:catagory, "lifestyle") %>
+        <%= label_tag(:catagory_lifestyle, "Lifestyle") %>
+      <%= radio_button_tag(:catagory, "music") %>
+        <%= label_tag(:catagory_music, "Music") %>
+      <%= radio_button_tag(:catagory, "productivity") %>
+        <%= label_tag(:catagory_productivity, "Productivity") %>
+      <%= radio_button_tag(:catagory, "photo") %>
+        <%= label_tag(:catagory_photo, "Photo & Video") %>
+      <%= radio_button_tag(:catagory, "weather") %>
+        <%= label_tag(:catagory_weather, "Weather") %>
+      <%= radio_button_tag(:catagory, "sports") %>
+        <%= label_tag(:catagory_sports, "Sports") %>
+      <%= radio_button_tag(:catagory, "utility") %>
+        <%= label_tag(:catagory_utility, "Utility") %>
+      <%= radio_button_tag(:catagory, "misc") %>
+        <%= label_tag(:catagory_misc, "Misc") %>
+    </p>
  
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
 </div>
