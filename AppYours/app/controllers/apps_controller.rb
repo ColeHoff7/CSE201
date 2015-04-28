@@ -1,6 +1,19 @@
 class AppsController < ApplicationController
   
+  def index
+    @apps = App.all
+  end
+
+  def show
+    @apps = App.find(params[:id])
+  end
+
   def new
+    # @apps = App.new
+  end
+
+  def edit
+    @apps = App.find(params[:id])
   end
 
   def create
@@ -12,19 +25,7 @@ class AppsController < ApplicationController
       render 'new'
     end
   end
-
-  def index
-    @apps = App.all
-  end
-
-  def show
-    @apps = App.find(params[:id])
-  end
-
-  def edit
-    @apps = App.find(params[:id])
-  end
-
+  
   def update
     @apps = App.find(params[:id])
 
@@ -35,11 +36,15 @@ class AppsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+    @apps = App.find(params[:id])
+    @apps.destroy
+
+    redirect_to apps_path
   end
 
   private
     def apps_params
-      params.require(:apps).permit(:name, :description, :appl_plat, :appl_price, :appl_vers, :appl_store :andr_plat, :andr_price, :andr_vers, :andr_store :wind_plat, :wind_price, :wind_vers, :wind_store, :developer, :catagory)
+      params.require(:apps).permit(:name, :description, :appl_plat, :appl_price, :appl_vers, :appl_store, :andr_plat, :andr_price, :andr_vers, :andr_store, :wind_plat, :wind_price, :wind_vers, :wind_store, :developer, :catagory)
     end
 end

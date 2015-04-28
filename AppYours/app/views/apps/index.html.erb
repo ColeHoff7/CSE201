@@ -1,18 +1,23 @@
 <h1>All Apps</h1>
+
+<%= link_to 'New app', new_app_path %>
  
 <table>
 	<tr>
     <th>Name</th>
     <th>Description</th>
-     <th colspan="2"></th>
+    <th colspan="2"></th>
   </tr>
  
   <% @apps.each do |apps| %>
     <tr>
       <td><%= apps.name %></td>
       <td><%= apps.description %></td>
-      <td><%= link_to 'show', apps_path(apps) %></td>
-      <td><%= link_to 'Edit', apps_path(apps) %></td>
+      <td><%= link_to 'show', app_path(apps) %></td>
+      <td><%= link_to 'Edit', edit_app_path(apps) %></td>
+      <td><%= link_to 'Destroy', app_path(apps),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
