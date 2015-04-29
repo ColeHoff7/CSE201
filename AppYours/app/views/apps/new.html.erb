@@ -15,8 +15,12 @@
 
 
 <div id = content>
+<div id=form>
+
+  <div id=top2><p>Submit a New App</div>
+  <div id = inner>
+
   <%= form_for :apps, url: apps_path do |f| %>
-  
     <p>
       <%= f.label :app_name %><br>
       
@@ -82,7 +86,7 @@
       <%= radio_button_tag(:catagory, "kids") %>
         <%= label_tag(:catagory_kids, "Kids") %>
       <%= radio_button_tag(:catagory, "lifestyle") %>
-        <%= label_tag(:catagory_lifestyle, "Lifestyle") %>
+        <%= label_tag(:catagory_lifestyle, "Lifestyle") %><br>
       <%= radio_button_tag(:catagory, "music") %>
         <%= label_tag(:catagory_music, "Music") %>
       <%= radio_button_tag(:catagory, "productivity") %>
@@ -103,4 +107,6 @@
       <%= f.submit %>
     </p>
   <% end %>
+  </div>
+  </div>
 </div>

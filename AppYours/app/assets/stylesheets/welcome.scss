@@ -79,10 +79,11 @@
   float:left;
   width: 14em;
   position: absolute;
-  top: 5em;
+  top: 0em;
   bottom: 0;
   left: 0;
   z-index: -1;
+  transition: 0s background-color;
 }
 
 .subcats li{
@@ -112,15 +113,20 @@
 #nav a:hover {
   color:Gray;
   text-shadow: 2px 2px #000000;
+   
 }
 
-#nav li:hover  + .subcats {
+#nav li:hover  + .subcats {  
   display: list-item;
-  transition: 0;
-  transition-delay: 100s; 
+  background-color: #56006B;
+  transition-delay: 10s;
 }
 
 .subcats:hover{
+  display: list-item;
+}
+
+.subcats li:hover{
   display: list-item;
 }
 
@@ -168,17 +174,18 @@
 
 html{
   background-color:#003399;
-
 }
+
 body{
   font-family: Arial;
 }
 
 #content{
   display: inline-block;
+  position:relative;
   margin-top: 7em;
   float: left;
-  margin-left: 20%;
+  margin-left: 18%
 }
 
 #top img{

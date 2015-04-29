@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'apps/new'
   get 'apps/edit'
   get 'apps/delete'
-
+  get '/welcome' =>'welcome#index'
   root 'welcome#index'
 
   #resource :apps

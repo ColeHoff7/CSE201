@@ -11,7 +11,7 @@
   -webkit-box-shadow: 0 0 30px 5px black;
   max-width:100%;
   max-height: 100px;
-  margin-left:-7px;
+  margin-left:0px;
   overflow:hidden;
   position:absolute;
 }
@@ -66,67 +66,38 @@
   color: gray;
 }
 
-#nav{
-  display: inline-block;
-  background-color:#56006B;
-  margin-top: 80px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: black;
-  padding:20px;
-  z-index:1;
-  height:1000px;
-}
 
-#nav ul{
-  list-style-type:none;
-}
-
-#nav li{
-  margin-bottom: 30px;
-}
-
-#nav a{
-  color: white;
-  font-size: 30px;
-  text-decoration: none;
-}
-
-#nav a:hover{
-  color:Gray;
-  text-shadow: 2px 2px #000000;
-}
-
-#nav p{
-  color: white;
-  font-size: 30px;
-  text-decoration: underline;
-  display: block;
-  position: relative;
-}
-
-#hot{
-  display: block;
+#form{
+  position:relative;
   background-color:white;
-  width:1500px;
-  height:500px;
-  margin-top:200px;
-  margin-right:75px;
-  float:right;
+  width:80%;
+  height:45em;
+  padding-bottom: 10px;
+  margin-top:3em;
+  float: left;
   -moz-box-shadow: 0 0 30px 3px black;
   -webkit-box-shadow: 0 0 30px 3px black;
 }
 
-#hot p{
-  color: white;
-  font-size: 30px;
-  position: absolute;
-  font-style:italic;
-  margin-left:50px;
-  margin-top:22px;
+#inner{
+  font-family:Arial;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#form p{
+  color: black;
+  font-size:30;
+  margin-bottom:10px;
+  margin-left:10px;
+  text-align:center;
 }
 
 #top2{
+ 
   background-color: #8F00B2;
   background: -moz-linear-gradient(#8F00B2, #56006B); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#8F00B2, #56006B); /* Standard syntax */
@@ -149,7 +120,17 @@ body{
 
 #content{
   display: inline-block;
-  float: right;
-  margin-top: 7em;
-  margin-right: 5em;
+  float: left;
+  margin-top: 2em;
+}
+
+#top2 p{
+  margin:auto;
+  color: white;
+  font-size: 1.875em /*30px;*/;
+  font-style:italic;
+  position:absolute;
+  margin-top:15px;
+  margin-left:40%;
+  text-align:center;
 }
