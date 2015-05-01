@@ -1,7 +1,7 @@
 class App < ActiveRecord::Base
-	validates :name, :description, :developer, presence: true
+	#validates :name, :description, :developer, presence: true
 
-	validates 
+	#validates 
 
 
 end
