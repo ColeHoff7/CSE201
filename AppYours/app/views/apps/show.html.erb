@@ -67,40 +67,73 @@
 	</ul>
 </div>
 
-<div id = content>
-<p>
-	<strong>App Name:</strong>
-	<%= @apps.name %>
-</p>
+<div id = showcontent>
+<div id = table>
+	<div id = toprow>
+		<div id = leftupper>
+			<p>
+				<strong>Apple Store:</strong>
+				<%= @apps.appl_plat %>
+				<%= @apps.appl_price %>
+				<%= @apps.appl_vers %>
+			</p>
 
-<p>
-	<strong>Description:</strong>
-	<%= @apps.description %>
-</p>
+			<p>
+				<strong>Android Store:</strong>
+				<%= @apps.andr_plat %>
+				<%= @apps.andr_price %>
+				<%= @apps.andr_vers %>
+			</p>
 
-<p>
-	<strong>Apple Store:</strong>
-	<%= @apps.appl_plat %>
-	<%= @apps.appl_price %>
-	<%= @apps.appl_vers %>
-</p>
+			<p>
+				<strong>Windows Store:</strong>
+				<%= @apps.wind_plat %>
+				<%= @apps.wind_price %>
+				<%= @apps.wind_vers %>
+			</p>
+		</div>
+	
 
-<p>
-	<strong>Android Store:</strong>
-	<%= @apps.andr_plat %>
-	<%= @apps.andr_price %>
-	<%= @apps.andr_vers %>
-</p>
 
-<p>
-	<strong>Windows Store:</strong>
-	<%= @apps.wind_plat %>
-	<%= @apps.wind_price %>
-	<%= @apps.wind_vers %>
-</p>
+		<div id = midupper>
+			<p id = name>
+				<strong><%= @apps.name %></strong>
+			</p>
+			<div id = applogo></div>
+		</div>
 
-<p>
-	<strong>Developer:</strong>
-	<%= @apps.developer %>
-</p>
+
+
+		<div id = rightupper>
+			<p>
+				<strong>Developer:</strong>
+				<%= @apps.developer %>
+			</p>
+		</div>
+	</div>
+</div>
+	
+	
+<div id = descriptionrow>
+	<div id = drow>
+		<p>
+			<strong>Description:</strong>
+		</p>
+		<p style = margin-left:45px;>
+			<%= @apps.description %>
+		</p>
+	</div>
+</div>
+
+<div id = picsrow>
+  <h1>Screenshots</h1>
+</div>
+
+<div id = divider></div>
+
+<div id = comments>
+  <h1>Comments</h1>
+</div>
+
+
 </div>
