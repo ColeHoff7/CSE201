@@ -1,6 +1,26 @@
-<h1>All Apps</h1>
+<div id=top>
+  <a href = "../welcome"><%= image_tag "header_logo.png" %></a>
+  <div id=log>
+  <ul id=login>
+    <li><a href="apps/new">Submit New App</a></li>
+    <li><a href="#">Login</a></li>
+    <li><a href="#">Sign Up</a></li>
+</ul>
+</div>
 
-<%= link_to 'New app', new_app_path %>
+<div id=search>
+  <p>Search: </p>
+</div>
+</div>
+
+<div id=nav>
+  <%= render 'side' %>
+</div>
+
+<div id = content>
+<div id=form>
+  <div id=top2><p>All Apps</div>
+  <div id = inner>
  
 <table>
 	<tr>
@@ -21,3 +41,7 @@
     </tr>
   <% end %>
 </table>
+
+  </div>
+  </div>
+</div>

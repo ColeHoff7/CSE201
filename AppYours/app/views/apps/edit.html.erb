@@ -1,5 +1,16 @@
-<h1>Editing App</h1>
+<div id=top>
+  <%= render 'top' %>
+</div>
+
+<div id=nav>
+  <%= render 'side' %>
+</div>
  
+
+ <div id = content>
+<div id=form>
+  <div id=top2><p>Edit The App</div>
+  <div id = inner>
 <%= form_for :apps, url: apps_path(@apps), method: :patch do |f| %>
  
   <% if @apps.errors.any? %>
@@ -103,5 +114,9 @@
     </p>
  
 <% end %>
+
+  </div>
+  </div>
+</div>
  
 

@@ -1,20 +1,9 @@
-<div id=top>
-  <%= render 'top' %>
-</div>
 
-<div id=nav>
-  <%= render 'side' %>
-</div>
-
-
-<div id = content>
-<div id=form>
-  <div id=top2><p>Submit a New App</div>
-  <div id = inner>
 
   <%= form_for :apps, url: apps_path do |f| %>
     <p>
       <%= f.label :app_name %><br>
+      
       <%= f.text_field :name %>
     </p>
 
@@ -27,7 +16,7 @@
     <p>
       <%= f.label :stores %><br>
 
-      <%= check_box_tag(:plat) %>
+      <%= check_box_tag(:appl_plat) %>
         <%= label_tag(:appl_plat, "Apple App Store") %><br>
       <%= f.label :price %>
         <%= f.text_field :appl_price %><br>
@@ -36,7 +25,7 @@
       <%= f.label :link %>
         <%= url_field(:user, :appl_store) %><br>
       <br>
-      <%= check_box_tag(:plat) %>
+      <%= check_box_tag(:andr_plat) %>
         <%= label_tag(:andr_plat, "Google Play Store") %><br>
       <%= f.label :price %>
         <%= f.text_field :andr_price %><br>
@@ -45,7 +34,7 @@
       <%= f.label :link %>
         <%= url_field(:user, :andr_store) %><br>
       <br>
-      <%= check_box_tag(:plat) %>
+      <%= check_box_tag(:winf_plat) %>
         <%= label_tag(:wind_plat, "Windows Store") %><br>
       <%= f.label :price %>
         <%= f.text_field :wind_price %><br>
@@ -98,6 +87,3 @@
       <%= f.submit %>
     </p>
   <% end %>
-  </div>
-  </div>
-</div>
