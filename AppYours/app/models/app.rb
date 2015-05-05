@@ -1,7 +1,5 @@
 class App < ActiveRecord::Base
-	#validates :name, :description, :developer, presence: true
+	has_many :comments
 
-	#validates 
-
-
+	validates :name, presence: true, length: {minimum: 5}
 end
