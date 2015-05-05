@@ -132,7 +132,6 @@
   display: list-item;
 }
 
-
 #nav p{
   color: white;
   font-size: 1.875em;
@@ -147,7 +146,7 @@
   width:93.75em /*1500px;*/;
   height:31.25em /*500px;*/;
   /*margin-top:200px;*/;
-  /*margin-right:75px;*/;
+  margin-right:1em;
   float:right;
   -moz-box-shadow: 0 0 30px 3px black;
   -webkit-box-shadow: 0 0 30px 3px black;
@@ -160,7 +159,7 @@
   width:93.75em /*1500px;*/;
   height:31.25em /*500px;*/;
   /*margin-top:200px;*/;
-  /*margin-right:75px;*/;
+  margin-right:1em;
   float:right;
   -moz-box-shadow: 0 0 30px 3px black;
   -webkit-box-shadow: 0 0 30px 3px black;
@@ -173,10 +172,11 @@
   width:93.75em /*1500px;*/;
   height:31.25em /*500px;*/;
   /*margin-top:200px;*/;
-  /*margin-right:75px;*/;
+  margin-right:1em;
   float:right;
   -moz-box-shadow: 0 0 30px 3px black;
   -webkit-box-shadow: 0 0 30px 3px black;
+  margin-bottom: 5em;
 }
 
 .titles{
