@@ -3,6 +3,12 @@ class CreateApps < ActiveRecord::Migration
     	create_table :apps do |t|
       		t.string	:name
       		t.text    	:description
+      			t.string	:logo
+    t.string	:pic1
+    t.string	:pic2
+    t.string	:pic3
+    t.string	:pic4
+    t.string	:pic5
 	  		t.boolean 	:appl_plat
 	  		t.float   	:appl_price
 	  		t.string  	:appl_vers
