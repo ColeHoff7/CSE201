@@ -74,22 +74,22 @@
 			<p>
 				<strong>Apple Store:</strong>
 				<%= @apps.appl_plat %>
-				<%= @apps.appl_price %>
-				<%= @apps.appl_vers %>
+				<p>Price: $<%= @apps.appl_price %></p>
+				<p>Version: <%= @apps.appl_vers %></p>
 			</p>
 
 			<p>
 				<strong>Android Store:</strong>
 				<%= @apps.andr_plat %>
-				<%= @apps.andr_price %>
-				<%= @apps.andr_vers %>
+				<p>Price: $<%= @apps.andr_price %></p>
+				<p>Version: <%= @apps.andr_vers %></p>
 			</p>
 
 			<p>
 				<strong>Windows Store:</strong>
 				<%= @apps.wind_plat %>
-				<%= @apps.wind_price %>
-				<%= @apps.wind_vers %>
+				<p>Price: $<%= @apps.wind_price %></p>
+				<p>Version: <%= @apps.wind_vers %></p>
 			</p>
 		</div>
 	
@@ -133,19 +133,6 @@
 
 <div id = comments>
   
-	<h1>Comments</h1>
-<% @apps.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
- 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
-
   <h2>Add a comment:</h2>
 <%= form_for([@apps, @apps.comments.build]) do |f| %>
   <p>
@@ -160,6 +147,21 @@
     <%= f.submit %>
   </p>
 <% end %>
+  
+	<h1>Comments</h1>
+	<% @apps.comments.each do |comment| %>
+	  <p>
+		<strong>Commenter:</strong>
+		<%= comment.commenter %>
+	  </p>
+	 
+	  <p>
+		<strong>Comment:</strong>
+		<%= comment.body %>
+	  </p>
+	<% end %>
+
+  
 </div>
 
 

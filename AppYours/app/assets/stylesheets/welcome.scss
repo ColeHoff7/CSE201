@@ -67,8 +67,10 @@
 }
 
 #nav{
+  overflow: auto;
   display: inline-block;
   background-color:#56006B;
+  min-height:100em;
   /*margin-top: 5em /*80px;*/;
   border-width: 2px;
   border-style: solid;
@@ -151,7 +153,33 @@
   -webkit-box-shadow: 0 0 30px 3px black;
 }
 
-#hot p{
+#topgames{
+  margin-top: 3em;
+  display: block;
+  background-color:white;
+  width:93.75em /*1500px;*/;
+  height:31.25em /*500px;*/;
+  /*margin-top:200px;*/;
+  /*margin-right:75px;*/;
+  float:right;
+  -moz-box-shadow: 0 0 30px 3px black;
+  -webkit-box-shadow: 0 0 30px 3px black;
+}
+
+#editors{
+  margin-top: 3em;
+  display: block;
+  background-color:white;
+  width:93.75em /*1500px;*/;
+  height:31.25em /*500px;*/;
+  /*margin-top:200px;*/;
+  /*margin-right:75px;*/;
+  float:right;
+  -moz-box-shadow: 0 0 30px 3px black;
+  -webkit-box-shadow: 0 0 30px 3px black;
+}
+
+.titles{
   color: white;
   font-size: 1.875em /*30px;*/;
   position: absolute;
@@ -160,7 +188,7 @@
   /*margin-top: 1.375em /*22px;*/;
 }
 
-#top2{
+.top2{
   background-color: #8F00B2;
   background: -moz-linear-gradient(#8F00B2, #56006B); /* For Firefox 3.6 to 15 */;
   background: linear-gradient(#8F00B2, #56006B); /* Standard syntax */;

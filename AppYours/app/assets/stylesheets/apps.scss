@@ -149,6 +149,7 @@ body{
 }
 
 #showcontent{
+
   display: inline-block;
   float: left;
   margin-top: 7em;
@@ -160,17 +161,20 @@ body{
 }
 
 #toprow{
+background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #DBDBDB));
   display: table-row;
   width:100%;
 }
 
 #leftupper{
+
   display: table-cell;
   width: 40em;
   text-align: center;
 }
 
 #midupper{
+  
   display: table-cell;
   background-color: #fffff0;
   width: 40em;
@@ -178,6 +182,7 @@ body{
 }
 
 #rightupper{
+
   display: table-cell;
   width: 40em;
   text-align:center;
@@ -185,6 +190,7 @@ body{
 
 
 #descriptionrow{
+
   display: table;
   box-shadow: inset 0px 0px 30px #888888;
   width: 100%;
@@ -215,7 +221,9 @@ body{
 }
 
 #comments{
-  height: 50em;
+background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #DBDBDB));
+  overflow: auto;
+  padding-bottom: 15px;
   text-align:center;
 }
 
