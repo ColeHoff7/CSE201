@@ -9,7 +9,7 @@ class AppsController < ApplicationController
   end
 
   def new
-    # @apps = App.new
+    @apps = App.new
   end
 
   def edit

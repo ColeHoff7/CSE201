@@ -7,7 +7,7 @@
 		<a href = "welcome"><%= image_tag "header_logo.png" %></a>
 		<div id=log>
 			<ul id=login>
-				<li><a href="apps/new">Submit New App</a></li>
+				<li><%= link_to 'Submit New App', new_app_path %></li>
 				<li><a href="#">Login</a></li>
 				<li><a href="#">Sign Up</a></li>
 			</ul>
@@ -21,6 +21,9 @@
 	<div id=nav>
 		<p> <strong>Navigation</strong> </p>
 		<ul id=cats>
+			
+			<li><%= link_to 'All Apps', apps_path %></li>
+
 			<li><a href="#">iOS</a></li>
 			<ul class=subcats>
 				<li><a href="#">Games</a></li>

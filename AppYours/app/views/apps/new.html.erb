@@ -12,92 +12,9 @@
   <div id=top2><p>Submit a New App</div>
   <div id = inner>
 
-  <%= form_for :apps, url: apps_path do |f| %>
-    <p>
-      <%= f.label :app_name %><br>
-      <%= f.text_field :name %>
-    </p>
 
-    <p>
-      <%= f.label :description %><br>
-      
-      <%= f.text_area :description %>
-    </p>
+    <%= render 'form' %>
 
-    <p>
-      <%= f.label :stores %><br>
-
-      <%= check_box_tag(:plat) %>
-        <%= label_tag(:appl_plat, "Apple App Store") %><br>
-      <%= f.label :price %>
-        <%= f.text_field :appl_price %><br>
-      <%= f.label :version %>
-        <%= f.text_field :appl_vers %><br>
-      <%= f.label :link %>
-        <%= url_field(:user, :appl_store) %><br>
-      <br>
-      <%= check_box_tag(:plat) %>
-        <%= label_tag(:andr_plat, "Google Play Store") %><br>
-      <%= f.label :price %>
-        <%= f.text_field :andr_price %><br>
-      <%= f.label :version %>
-        <%= f.text_field :andr_vers %><br>
-      <%= f.label :link %>
-        <%= url_field(:user, :andr_store) %><br>
-      <br>
-      <%= check_box_tag(:plat) %>
-        <%= label_tag(:wind_plat, "Windows Store") %><br>
-      <%= f.label :price %>
-        <%= f.text_field :wind_price %><br>
-      <%= f.label :version %>
-        <%= f.text_field :wind_vers %><br>
-      <%= f.label :link %>
-        <%= url_field(:user, :wind_store) %><br>
-    </p>
-
-    <p>
-      <%= f.label :developer %><br>
-      
-      <%= f.text_field :developer %>
-    </p>
-
-    <p>
-      <%= f.label :catagory %><br>
-      
-      <%= radio_button_tag(:catagory, "games") %>
-        <%= label_tag(:catagory_games, "Games") %>
-      <%= radio_button_tag(:catagory, "education") %>
-        <%= label_tag(:catagory_education, "Education") %>
-      <%= radio_button_tag(:catagory, "entertainment") %>
-        <%= label_tag(:catagory_entertainment, "Entertainment") %>
-      <%= radio_button_tag(:catagory, "food") %>
-        <%= label_tag(:catagory_food, "Food & Drink") %>
-      <%= radio_button_tag(:catagory, "health") %>
-        <%= label_tag(:catagory_health, "Health & Fitness") %>
-      <%= radio_button_tag(:catagory, "kids") %>
-        <%= label_tag(:catagory_kids, "Kids") %>
-      <%= radio_button_tag(:catagory, "lifestyle") %>
-        <%= label_tag(:catagory_lifestyle, "Lifestyle") %><br>
-      <%= radio_button_tag(:catagory, "music") %>
-        <%= label_tag(:catagory_music, "Music") %>
-      <%= radio_button_tag(:catagory, "productivity") %>
-        <%= label_tag(:catagory_productivity, "Productivity") %>
-      <%= radio_button_tag(:catagory, "photo") %>
-        <%= label_tag(:catagory_photo, "Photo & Video") %>
-      <%= radio_button_tag(:catagory, "weather") %>
-        <%= label_tag(:catagory_weather, "Weather") %>
-      <%= radio_button_tag(:catagory, "sports") %>
-        <%= label_tag(:catagory_sports, "Sports") %>
-      <%= radio_button_tag(:catagory, "utility") %>
-        <%= label_tag(:catagory_utility, "Utility") %>
-      <%= radio_button_tag(:catagory, "misc") %>
-        <%= label_tag(:catagory_misc, "Misc") %>
-    </p>
- 
-    <p>
-      <%= f.submit %>
-    </p>
-  <% end %>
   </div>
-  </div>
+</div>
 </div>

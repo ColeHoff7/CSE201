@@ -3,7 +3,6 @@ class CreateApps < ActiveRecord::Migration
     	create_table :apps do |t|
       		t.string	:name
       		t.text    	:description
-	  		
 	  		t.boolean 	:appl_plat
 	  		t.float   	:appl_price
 	  		t.string  	:appl_vers
@@ -18,10 +17,6 @@ class CreateApps < ActiveRecord::Migration
 	  		t.string  	:wind_store
 	  		t.string  	:developer
 	  		t.string	:catagory
-	  		# t.string  	:picture1
-	  		# t.string  	:picture2
-	  		# t.string  	:picture3
-	  		# t.string  	:video
       		t.timestamps null: false
    		end
   	end

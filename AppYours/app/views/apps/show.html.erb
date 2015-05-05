@@ -1,9 +1,9 @@
 <div id=top>
-	<%= render 'top' %>
+  <%= render 'top' %>
 </div>
 
 <div id=nav>
-	<%= render 'side' %>
+  <%= render 'side' %>
 </div>
 
 <div id = showcontent>
@@ -12,23 +12,35 @@
 		<div id = leftupper>
 			<p>
 				<strong>Apple Store:</strong>
-				<%= @apps.appl_plat %>
-				<%= @apps.appl_price %>
-				<%= @apps.appl_vers %>
+				<%= @apps.appl_plat %><br>
+				<weak>Price:</weak>
+				<%= @apps.appl_price %><br>
+				<weak>Version:</weak>
+				<%= @apps.appl_vers %><br>
+				<weak>Link:</weak>
+				<%= @apps.appl_store %>
 			</p>
 
 			<p>
-				<strong>Android Store:</strong>
-				<%= @apps.andr_plat %>
-				<%= @apps.andr_price %>
-				<%= @apps.andr_vers %>
+				<strong>Google Play Store:</strong>
+				<%= @apps.andr_plat %><br>
+				<weak>Price:</weak>
+				<%= @apps.andr_price %><br>
+				<weak>Version:</weak>
+				<%= @apps.andr_vers %><br>
+				<weak>Link:</weak>
+				<%= @apps.andr_store %>
 			</p>
 
 			<p>
 				<strong>Windows Store:</strong>
-				<%= @apps.wind_plat %>
-				<%= @apps.wind_price %>
-				<%= @apps.wind_vers %>
+				<%= @apps.wind_plat %><br>
+				<weak>Price:</weak>
+				<%= @apps.wind_price %><br>
+				<weak>Version:</weak>
+				<%= @apps.wind_vers %><br>
+				<weak>Link:</weak>
+				<%= @apps.wind_store %>
 			</p>
 		</div>
 	
@@ -48,6 +60,11 @@
 				<strong>Developer:</strong>
 				<%= @apps.developer %>
 			</p>
+
+			<p>
+				<strong>Catagory:</strong>
+				<%= @apps.catagory %>
+			</p>
 		</div>
 	</div>
 </div>
@@ -66,6 +83,7 @@
 
 <div id = picsrow>
   <h1>Screenshots</h1>
+
 </div>
 
 <div id = divider></div>

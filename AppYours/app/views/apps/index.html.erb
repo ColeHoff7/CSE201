@@ -1,16 +1,5 @@
 <div id=top>
-  <a href = "../welcome"><%= image_tag "header_logo.png" %></a>
-  <div id=log>
-  <ul id=login>
-    <li><a href="apps/new">Submit New App</a></li>
-    <li><a href="#">Login</a></li>
-    <li><a href="#">Sign Up</a></li>
-</ul>
-</div>
-
-<div id=search>
-  <p>Search: </p>
-</div>
+  <%= render 'top' %>
 </div>
 
 <div id=nav>
@@ -35,7 +24,7 @@
       <td><%= apps.description %></td>
       <td><%= link_to 'show', app_path(apps) %></td>
       <td><%= link_to 'Edit', edit_app_path(apps) %></td>
-      <td><%= link_to 'Destroy', app_path(apps),
+      <td><%= link_to 'Delete', app_path(apps),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
