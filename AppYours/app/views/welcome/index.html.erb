@@ -1,18 +1,21 @@
+<% link_to 'My Apps', controller: 'apps' %>
 <!DOCTYPE html>
 <html>
 
 <body>
 	<div id=top>
-  
+		<a href = "welcome"><%= image_tag "header_logo.png" %></a>
 		<div id=log>
 			<ul id=login>
-				<li><a href="apps/new">Submit New App</a></li>
+				<li><%= link_to 'Submit New App', new_app_path %></li>
 				<li><a href="#">Login</a></li>
 				<li><a href="#">Sign Up</a></li>
 			</ul>
 		</div>
-	
+		
+		
 		<div id=search>
+		    
 			<p>Search: </p>
 		</div>
 	</div>
@@ -20,6 +23,9 @@
 	<div id=nav>
 		<p> <strong>Navigation</strong> </p>
 		<ul id=cats>
+			
+			<li><%= link_to 'All Apps', apps_path %></li>
+
 			<li><a href="#">iOS</a></li>
 			<ul class=subcats>
 				<li><a href="#">Games</a></li>
@@ -72,12 +78,26 @@
 	</div>
 	<div id = content>
 	<div id=hot>
-
-		<div id=top2>
-			<p>Hot Apps</p>
+		<div class=top2>
+			<p class=titles>Hot Apps</p>
 		</div>
 	</div>
+	
+	<div id=topgames>
+		<div class=top2>
+			<p class=titles>Top Games</p>
+		</div>
 	</div>
+	
+	<div id=editors>
+		<div class=top2>
+			<p class = titles>Editors Pics</p>
+		</div>
+	</div>
+	
+	</div>
+	
+	
 </body>
 
 </html>

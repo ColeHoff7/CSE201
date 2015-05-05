@@ -1,78 +1,20 @@
 <div id=top>
-  
-    <div id=log>
-      <ul id=login>
-        <li><a href="apps/new">Submit New App</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Sign Up</a></li>
-      </ul>
-    </div>
-  
-    <div id=search>
-      <p>Search: </p>
-    </div>
-  </div>
+  <%= render 'top' %>
+</div>
 
-  <div id=nav>
-    <p> <strong>Navigation</strong> </p>
-    <ul id=cats>
-      <li><a href="#">iOS</a></li>
-      <li><a href="#">Android</a></li>
-      <li><a href="#">Windows</a></li>
-    </ul>
-  </div>
+<div id=nav>
+  <%= render 'side' %>
+</div>
+
 
 <div id = content>
-<%= form_for :article do |f| %>
-  
-  <p>
-    <%= f.label :app_name %><br>
-    <%= f.text_field :name %>
-  </p>
+<div id=form>
+  <div id=top2><p>Submit a New App</div>
+  <div id = inner>
 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
 
-  <!--   	#Maybe a scroll wheel -->
-  <p>
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </p>
+    <%= render 'form' %>
 
-  <p>
-    <%= f.label :stores %><br>
-    <%= check_box_tag(:apple) %>
-    <%= label_tag(:apple, "Apple App Store") %><br>
-    <%= check_box_tag(:google) %>
-    <%= label_tag(:google, "Google Play Store") %><br>
-    <%= check_box_tag(:windows) %>
-    <%= label_tag(:windows, "Apple App Store") %><br>
-  </p>
-
-  <p>
-    <%= f.label :developer %><br>
-    <%= f.text_field :developer %>
-  </p>
-
-  <p>
-    <%= f.label :newest_version %><br>
-    <%= f.text_field :version %>
-  </p>
-
-  <p>
-    <%= radio_button_tag(:age, "child") %>
-    <%= label_tag(:age_child, "I am younger than 21") %>
-    <%= radio_button_tag(:age, "adult") %>
-    <%= label_tag(:age_adult, "I'm over 21") %>
-  </p>
-
-<!-- Will we want the same app that is on multiple stores to have a different page for each store? -->
-
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+  </div>
+</div>
 </div>

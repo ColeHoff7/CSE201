@@ -1,0 +1,90 @@
+<%= form_for :apps, url: apps_path do |f| %>
+    
+  <p>
+    <label for="post_title">App Name</label><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <label for="post_title">Description</label><br>
+    <%= f.text_area :description, :size => "100x5" %>
+  </p>
+
+  <p>
+    <label for="post_title">Stores</label><br>
+
+    <br>
+
+    <label for="post_title">Apple App Store</label>
+    <%= f.check_box :appl_plat %><br>
+    <label for="post_title">Price</label>
+    <%= f.text_field :appl_price %><br>
+    <label for="post_title">Version</label>
+    <%= f.text_field :appl_vers %><br>
+    <label for="post_title">Link</label>
+    <%= f.text_field :appl_store %><br>
+    
+    <br>
+
+    <label for="post_title">Google Play Store</label>
+    <%= f.check_box :andr_plat %><br>
+    <label for="post_title">Price</label>
+    <%= f.text_field :andr_price %><br>
+    <label for="post_title">Version</label>
+    <%= f.text_field :andr_vers %><br>
+    <label for="post_title">Link</label>
+    <%= f.text_field :andr_store %><br>
+
+    <br>
+    <label for="post_title">Windows Store</label>
+    <%= f.check_box :wind_plat %><br>
+    <label for="post_title">Price</label>
+    <%= f.text_field :wind_price %><br>
+    <label for="post_title">Version</label>
+    <%= f.text_field :wind_vers %><br>
+    <label for="post_title">Link</label>
+    <%= f.text_field :wind_store %><br>
+  </p>
+
+  <p>
+    <label for="post_title">Developer</label>
+    <%= f.text_field :developer %><br>
+  </p>
+
+  <p>
+    <label for="post_title">Catagory</label>
+
+    <%= f.radio_button :catagory, 'Games' %>
+    <label for="post_title">Games</label>
+    <%= f.radio_button :catagory, 'Education' %>
+    <label for="post_title">Education</label>
+    <%= f.radio_button :catagory, 'Entertainment' %>
+    <label for="post_title">Entertainment</label>
+    <%= f.radio_button :catagory, 'Food & Drink' %>
+    <label for="post_title">Food & Drink</label>
+    <%= f.radio_button :catagory, 'Health' %>
+    <label for="post_title">Health</label>
+    <%= f.radio_button :catagory, 'Kids' %>
+    <label for="post_title">Kids</label>
+    <%= f.radio_button :catagory, 'Lifestyle' %>
+    <label for="post_title">Lifestyle</label><br>
+    <%= f.radio_button :catagory, 'Music' %>
+    <label for="post_title">Music</label>
+    <%= f.radio_button :catagory, 'Productivity' %>
+    <label for="post_title">Productivity</label>
+    <%= f.radio_button :catagory, 'Photo & Video' %>
+    <label for="post_title">Photo & Video</label>
+    <%= f.radio_button :catagory, 'Weather' %>
+    <label for="post_title">Weather</label>
+    <%= f.radio_button :catagory, 'Sports' %>
+    <label for="post_title">Sports</label>
+    <%= f.radio_button :catagory, 'Utility' %>
+    <label for="post_title">Utility</label>
+    <%= f.radio_button :catagory, 'Misc' %>
+    <label for="post_title">Misc</label>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

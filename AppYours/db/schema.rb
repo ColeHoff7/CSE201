@@ -11,30 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421142213) do
+ActiveRecord::Schema.define(version: 20150505012722) do
 
   create_table "apps", force: :cascade do |t|
     t.string   "name"
-    t.boolean  "appl_plat"
-    t.boolean  "wind_plat"
-    t.boolean  "andr_plat"
-    t.string   "developer"
-    t.string   "appl_vers"
-    t.string   "wind_vers"
-    t.string   "andr_vers"
-    t.string   "appl_store"
-    t.string   "wind_store"
-    t.string   "andr_store"
-    t.float    "appl_price"
-    t.float    "wind_price"
-    t.float    "andr_price"
-    t.string   "picture1"
-    t.string   "picture2"
-    t.string   "picture3"
-    t.string   "video"
     t.text     "description"
+    t.boolean  "appl_plat"
+    t.float    "appl_price"
+    t.string   "appl_vers"
+    t.string   "appl_store"
+    t.boolean  "andr_plat"
+    t.float    "andr_price"
+    t.string   "andr_vers"
+    t.string   "andr_store"
+    t.boolean  "wind_plat"
+    t.float    "wind_price"
+    t.string   "wind_vers"
+    t.string   "wind_store"
+    t.string   "developer"
+    t.string   "catagory"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "app_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["app_id"], name: "index_comments_on_app_id"
 
 end
