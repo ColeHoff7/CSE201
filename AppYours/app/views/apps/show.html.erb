@@ -44,14 +44,13 @@
 				
 			</p>
 		</div>
-	
-
 
 		<div id = midupper>
 			<p id = name>
 				<strong><%= @apps.name %></strong>
 			</p>
-			<div id = applogo></div>
+			<div id = applogo><img src="<%= @apps.appl_store %>", width="250" , height="250"> </img></div>
+			
 		</div>
 
 
@@ -99,7 +98,7 @@
   </p>
   <p>
     <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body,:size => "200x5" %>
   </p>
   <p>
     <%= f.submit %>
@@ -108,15 +107,20 @@
   
 	<h1>Comments</h1>
 	<% @apps.comments.each do |comment| %>
-	  <p>
-		<strong>Commenter:</strong>
-		<%= comment.commenter %>
-	  </p>
-	 
-	  <p>
-		<strong>Comment:</strong>
-		<%= comment.body %>
-	  </p>
+	<table id = commenttable style = "width: 100%">
+	    <tr>
+			<td><p>
+				<strong>Commenter:</strong>
+				<%= comment.commenter %>
+			</p></td>
+		</tr>
+		<tr>
+			<td><p>
+				<strong>Comment:</strong>
+				<%= comment.body %>
+			</p></td>
+		</tr>
+	</table>
 	<% end %>
 	
 	
