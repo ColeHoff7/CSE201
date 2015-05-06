@@ -231,6 +231,7 @@ background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0,
 background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #DBDBDB));
   overflow: auto;
   padding-bottom: 15px;
+  position: relative;
   text-align:center;
 }
 
@@ -247,10 +248,11 @@ background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0,
   float: left;
   border: 1px solid black;
   margin-bottom: 10px;
-  
+  border-collapse: collapse;
+  margin-left: 1em;
 }
 
 
 #commenttable td{
-  
+  /*border: 1px solid black;*/
 }
