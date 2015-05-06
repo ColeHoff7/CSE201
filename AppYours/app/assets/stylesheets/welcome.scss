@@ -96,6 +96,29 @@
   display:none;
 }
 
+UL#menu { visibility: hidden; list-style-type: square; }
+
+#menu A { display: block; line-height: 10pt; }
+#menu A:hover, #menu A.unfolded, #menu A.unfolded:hover { color: #FFFFFF; background-color: transparent;}
+
+#menu LI { position: relative; margin: 0px; padding: 3px 0px 3px 9px; }
+
+#menu LI UL {
+		display: none;
+		position: absolute;
+		top: 0px;
+		border: 1px solid #000000;
+		padding: 1px;
+		list-style-type: none;
+		color: #FFFFFF;
+		background-color: #FF00FF !important;
+}
+
+#menu LI UL { left: 120px; width: 110px; z-index: 100; }
+html>body #menu LI UL { left: 90px; }
+
+#menu LI UL LI UL { left: 90px; z-index: 200; }
+html>body #menu LI UL LI UL { left: 75px; }
 
 
 #nav ul{

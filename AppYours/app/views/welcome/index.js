@@ -22,10 +22,18 @@ var navTimer;
 
 //image slideshow
 
-function nextImage(){
+function nextImage(x){
 	if (!document.images)
 		return
-	document.getElementById('slide').src = slideimages[step].src
+	
+	if(x = 0)
+		document.getElementById('slide0').src = hotAppsSlides[step].src
+	
+	if(x = 1)
+		document.getElementById('slide1').src = topGamesSlides[step].src
+		
+	if(x = 2)
+		document.getElementById('slide2').src = editorsPicsSlides[step].src
 	
 	if(step<2) step++
 	else step = 0

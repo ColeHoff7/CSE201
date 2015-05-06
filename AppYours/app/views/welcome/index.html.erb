@@ -1,10 +1,44 @@
 <% link_to 'My Apps', controller: 'apps' %>
 <!DOCTYPE html>
 <html>
+<head>
+	<script type="text/javascript" language="JavaScript" src ="index.js"></script>
+	
+	<script type="text/javascript">
+	
+	var hotAppsSlides = new Array()
+	hotAppsSlides[0] = new Image()
+	hotAppsSlides[0].src = "http://thedailycannibal.com/wp-content/uploads/2012/03/666.jpg"
+	hotAppsSlides[1] = new Image()
+	hotAppsSlides[1].src = "http://ak-hdl.buzzfed.com/static/enhanced/webdr01/2013/5/29/10/enhanced-buzz-18742-1369837724-0.jpg"
+	hotAppsSlides[2] = new Image()
+	hotAppsSlides[2].src = "http://graphics.crucialattack.nl/covers/Cannibal_Corpse_-_The_Wretched_Spawn-LP.jpg"
+	hotAppsSlides[3] = new Image()
+	hotAppsSlides[3].src = "http://www.ggwallpaper.com/file/1559/600x338/16:9/very-cute-baby-kitty_1912249061.jpg"
+	hotAppsSlides[4] = new Image()
+	hotAppsSlides[4].src = "http://www.feminiya.com/wp-content/uploads/2013/04/scary-face-519x390.jpg"
+	
+	//var topGamesSlides = new Array()
+	//topGamesSlides[0] = new Image()
+	//topGamesSlides[0] = new Image()
+	//topGamesSlides[0] = new Image()
+	//topGamesSlides[0] = new Image()
+	//topGamesSlides[0] = new Image()
+	
+	//var editorsPicsSlides = new Array()
+	//editorsPicsSlides[0] = new Image()
+	//editorsPicsSlides[1] = new Image()
+	//editorsPicsSlides[2] = new Image()
+	//editorsPicsSlides[3] = new Image()
+	//editorsPicsSlides[4] = new Image()
+	
+	</script>
+</head>
 
 <body>
 	<div id=top>
 		<a href = "welcome"><%= image_tag "header_logo.png" %></a>
+		
 		<div id=log>
 			<ul id=login>
 				<li><%= link_to 'Submit New App', new_app_path %></li>
@@ -76,10 +110,51 @@
 			</ul>
 		</ul>
 	</div>
+	
+	
 	<div id = content>
 	<div id=hot>
 		<div class=top2>
 			<p class=titles>Hot Apps</p>
+			<a href="javascript:slidelink()"><img src="http://thedailycannibal.com/wp-content/uploads/2012/03/666.jpg" id="slide0" width="500" height="400" style="PADDING-LEFT: 40px; PADDING-TOP: 73px"/></a>
+			<script type="text/javascript">
+			var step = 0
+			var currentImage = 0
+			function nextImage(){
+			
+				if (!document.images)
+					return
+
+				document.getElementById('slide0').src = hotAppsSlides[step].src		
+				currentImage = step
+	
+				if(step<4){
+					step++
+				}
+				else{
+					step=0
+				}
+				setTimeout("nextImage()", 2500)
+			}
+			
+			function slidelink(){
+			
+			if (currentImage == 0)
+				window.location = "google.com"
+			else if(currentImage == 1)
+				window.location = "writtenkitten.net"
+			else if(currentImage == 2)
+				window.location = "firstpersonlover.com"
+			else if(currentImage == 3)
+				window.location = "4chan.org"
+			else if(currentImage == 4)
+				window.location = "yahoo.com"
+				
+			}
+			
+			nextImage()
+			</script>
+			
 		</div>
 	</div>
 	
