@@ -1,9 +1,28 @@
 Rails.application.routes.draw do
 
+
+  get 'sessions/new'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+  
+  
   resources :apps do
     resources :comments
-  end
-
+  end 
+  
+  resources :users
+  #this one line above contains all of the routing we need
+  #get 'users/new'
+  #get 'users/delete'
+  #get 'users/index'
+  #get 'users/show'
+  #get 'users/edit'
+  
+  
+  
+  
+  
   get 'apps/create'
   get 'apps/index'
   get 'apps/show'
