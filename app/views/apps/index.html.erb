@@ -1,0 +1,36 @@
+<div id=top>
+  <%= render 'top' %>
+</div>
+
+<div id=nav>
+  <%= render 'side' %>
+</div>
+
+<div id = content>
+<div id=form>
+  <div id=top2><p>All Apps</p></div>
+  <div id = inner>
+ 
+<table>
+	<tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @apps.each do |apps| %>
+    <tr>
+      <td><%= apps.name %></td>
+      <td><%= apps.description %></td>
+      <td><%= link_to 'show', app_path(apps) %></td>
+      <td><%= link_to 'Edit', edit_app_path(apps) %></td>
+      <td><%= link_to 'Delete', app_path(apps),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+  </div>
+  </div>
+</div>

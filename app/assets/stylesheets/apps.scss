@@ -1,0 +1,258 @@
+#top{
+  background-color: #8F00B2;
+  background: -moz-linear-gradient(#8F00B2, #56006B); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#8F00B2, #56006B); /* Standard syntax */
+  width: 100%;
+  height: 100px;
+  color: white;
+  display: inline-block;
+  margin-top:-16px;
+  -moz-box-shadow: 0 0 30px 5px black;
+  -webkit-box-shadow: 0 0 30px 5px black;
+  max-width:100%;
+  max-height: 100px;
+  margin-left:0px;
+  overflow:hidden;
+  position:absolute;
+}
+
+#log{ /*holds the login buttons*/
+  display: inline-block;
+  box-sizing:border-box;
+  float: right;
+  margin-top:25px;
+  margin-right:20px;
+  z-index: 20;
+}
+
+#login{
+  list-style-type:none;
+  display:inline-block;
+}
+#login li{
+  display: inline;
+  margin-right: 25px;
+}
+#login a{
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+#login a:hover{
+  color:Gray;
+  text-shadow: 2px 2px #000000;
+}
+
+#search{ /*temporary search bar*/
+  height: 40px;
+  width: 600px;
+  background-color: white;
+  display:inline-block;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #000000;
+  box-sizing:border-box;
+  float: right;
+  margin-top:35px;
+  margin-right: 25%;
+}
+
+#search p{
+  float:left;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: gray;
+}
+
+
+#form{
+  position:relative;
+  background-color:white;
+  width:80%;
+  height:45em;
+  padding-bottom: 10px;
+  margin-top:3em;
+  overflow:auto;
+  margin:auto;
+  -moz-box-shadow: 0 0 30px 3px black;
+  -webkit-box-shadow: 0 0 30px 3px black;
+}
+
+#inner{
+  font-family:Arial;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#form p{
+  color: black;
+  font-size:30;
+  margin-bottom:10px;
+  margin-left:10px;
+  text-align:center;
+}
+
+#top2{
+ 
+  background-color: #8F00B2;
+  background: -moz-linear-gradient(#8F00B2, #56006B); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#8F00B2, #56006B); /* Standard syntax */
+  width: 1500px;
+  height: 70px;
+  color: white;
+  margin-top: 0 px;
+  margin-left: 0 px;
+  box-shadow: 0 3px 6px 1px #000000;
+  max-width:100%;
+  text-align: center;
+}
+
+#top2 p{
+  text-align: center;
+  margin-left: 15px;
+}
+
+html{
+  background-color:#3366FF;
+
+}
+body{
+  font-family: Arial;
+}
+
+#content{
+  display: inline-block;
+  float: left;
+  margin-top: 2em;
+   
+}
+
+#top2 p{
+  margin:auto;
+  color: white;
+  font-size: 1.875em /*30px;*/;
+  font-style:italic;
+  position:absolute;
+  margin-top:15px;
+  margin-left:40%;
+  text-align:center;
+}
+
+/*starting show page CSS stuff*/
+#table{
+  display: table;
+}
+
+#name{
+  color: black;
+  text-align: center;
+  font-size: 48px;
+  text-shadow: 2px 4px #d3d3d3;
+}
+
+#showcontent{
+
+  display: inline-block;
+  float: left;
+  margin-top: 7em;
+  margin-left: 18%;
+  width: 79%;
+  background-color: #fffff0;
+  -moz-box-shadow: 0 0 30px 3px black;
+  -webkit-box-shadow: 0 0 30px 3px black;
+}
+
+#toprow{
+background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #DBDBDB));
+  display: table-row;
+  width:100%;
+}
+
+#leftupper{
+
+  display: table-cell;
+  width: 40em;
+  text-align: center;
+}
+
+#midupper{
+  
+  display: table-cell;
+  background-color: #fffff0;
+  width: 40em;
+  box-shadow: 0px -6px 20px 1px rgba(0,0,0,0.45);
+}
+
+#rightupper{
+
+  display: table-cell;
+  width: 40em;
+  text-align:center;
+}
+
+
+#descriptionrow{
+
+  display: table;
+  box-shadow: inset 0px 0px 30px #888888;
+  width: 100%;
+}
+
+#drow{
+  display: table-row;
+  padding:25px;
+  height: 15em;
+}
+
+#descriptionrow p{
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+#picsrow{
+  text-align: center;
+  width:100%;
+  height: 30em;
+}
+
+#divider{
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 7px 0px black;
+}
+
+#comments{
+background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #DBDBDB));
+  overflow: auto;
+  padding-bottom: 15px;
+  position: relative;
+  text-align:center;
+}
+
+#applogo{
+  background-color: RED;
+  width:250px;
+  height:250px;
+  margin: auto;
+  margin-bottom:10px;
+}
+
+#commenttable{
+  text-align: left;
+  float: left;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  margin-left: 1em;
+}
+
+
+#commenttable td{
+  /*border: 1px solid black;*/
+}
