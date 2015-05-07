@@ -47,16 +47,25 @@
 #search{ /*temporary search bar*/;
   height: 2.5em /*40px;*/;
   width: 31.25em /*500px;*/;
-  background-color: white;
+  /*background-color: white;*/
   display:inline-block;
-  border-width: 1px;
+ /* border-width: 1px;
   border-style: solid;
   border-radius: 10px;
-  border-color: #000000;
+  border-color: #000000;*/
   box-sizing:border-box;
   float: right;
   margin-top: 2.188em /*35px;*/;
   margin-right: 25%;
+}
+
+#search input {
+    color: #999;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 3px;
+    border: 2px solid #999;
+    border-radius:2px;
 }
 
 #search p{
