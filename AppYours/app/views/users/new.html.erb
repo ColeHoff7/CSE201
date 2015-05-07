@@ -1,24 +1,44 @@
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<div id=top>
+  <%= render 'welcome/top' %>
+</div>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
+<div id=nav>
+  <%= render 'welcome/side' %>
+</div>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
+<div id = content>
+  <div id=form>
+    
+    <div id=top2>
+      <p>Sign Up</p>
+    </div>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+    <p></p>
+    
+    <div id = inner>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div align = "center">
+            <%= form_for(@user) do |f| %>
+              <%= render 'shared/error_messages' %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+              <%= f.label :name %>
+              <%= f.text_field :name, class: 'form-control' %><br>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+              <%= f.label :email %>
+              <%= f.email_field :email, class: 'form-control' %><br>
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
+              <%= f.label :password %>
+              <%= f.password_field :password, class: 'form-control' %>
+
+              <%= f.label :password_confirmation, "Confirmation" %>
+              <%= f.password_field :password_confirmation, class: 'form-control' %><br>
+
+              <%= f.submit "Create my account", class: "btn btn-primary" %><br>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
