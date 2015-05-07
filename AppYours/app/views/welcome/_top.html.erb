@@ -10,7 +10,7 @@
 
 <div id=search>
 	<%= form_tag("/search", method: "get", size: "5x5") do %>
-	  <%= label_tag(:q, "Search for:") %>
+
 	  <%= text_field_tag(:q) %>
 	  <%= submit_tag("Search") %>
 	<% end %>
