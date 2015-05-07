@@ -1,10 +1,25 @@
-<% provide(:title, 'All users') %>
-<h1>All users</h1>
+<div id=top>
+  <%= render 'welcome/top' %>
+</div>
 
-<%= will_paginate %>
+<div id=nav>
+  <%= render 'welcome/side' %>
+</div>
 
-<ul class="users">
-  <%= render @users %>
-</ul>
+<div id=content>
+	<div id=form>
+
+		<div id=top2>
+			<p id=signup>All Users</p>
+    	</div>
+
+    	<dic id=inner>
+			<%= will_paginate %>
+			<ul class="users">
+  				<%= render @users %>
+			</ul>
+		</div>
+	</div>
+</div>
 
 <%= will_paginate %>

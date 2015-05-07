@@ -124,11 +124,11 @@ logo: 'http://i.imgur.com/osV66h3.jpg', pic1: 'http://i.imgur.com/HQ1LlKS.png',
 pic2: 'http://i.imgur.com/rpwphHD.png', pic3: 'http://i.imgur.com/QwKLEEE.png',
 pic4: '', pic5: '')
 
-# User.create!( name:  "Albus Dumbledore",
-#               email: "adumbledor@hogwarts.edu",
-#               password:              "password",
-#               password_confirmation: "password",
-#               admin: true)
+User.create!( name:  "Albus Dumbledore",
+              email: "adumbledor@hogwarts.edu",
+              password:              "password",
+              password_confirmation: "password",
+              admin: true)
 
 User.create!( name:  "Harry Potter",
               email: "hpotter@hogwarts.edu",
