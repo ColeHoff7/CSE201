@@ -11,6 +11,7 @@
 		<div id = toprow>
 			
 			<div id = leftupper>
+				<% if @apps.appl_plat %>
 				<p>
 					<strong>Apple Store:</strong>
 					<%= @apps.appl_plat %><br>
@@ -21,7 +22,8 @@
 					<weak>Link:</weak>
 					<%= @apps.appl_store %>
 				</p>
-
+				<% end %>
+				<% if @apps.andr_plat %>
 				<p>
 					<strong>Google Play Store:</strong>
 					<%= @apps.andr_plat %><br>
@@ -32,7 +34,8 @@
 					<weak>Link:</weak>
 					<%= @apps.andr_store %>
 				</p>
-
+				<% end %>
+				<% if @apps.wind_plat %>
 				<p>
 					<strong>Windows Store:</strong>
 					<%= @apps.wind_plat %><br>
@@ -43,6 +46,7 @@
 					<weak>Link:</weak>
 					<%= @apps.wind_store %>
 				</p>
+				<% end %>
 			</div>
 
 			<div id = midupper>
