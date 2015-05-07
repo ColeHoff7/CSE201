@@ -24,14 +24,18 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
+<<<<<<< HEAD
   gem 'bcrypt', '~> 3.1.10'
+=======
+gem 'bcrypt', '~> 3.1.7'
+>>>>>>> 676dca200cdda804a3a85ccf19a2e7ffe20c362d
 
   gem 'faker', '~> 1.4.3'
   gem 'will_paginate', '~> 3.0.7'
   gem 'bootstrap-will_paginate', '~> 0.0.10'
   
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
