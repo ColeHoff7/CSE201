@@ -7,126 +7,129 @@
 </div>
 
 <div id = showcontent>
-<div id = table>
-	<div id = toprow>
-		<div id = leftupper>
-			<p>
-				<strong>Apple Store:</strong>
-				<%= @apps.appl_plat %><br>
-				<weak>Price:</weak>
-				<%= @apps.appl_price %><br>
-				<weak>Version:</weak>
-				<%= @apps.appl_vers %><br>
-				<weak>Link:</weak>
-				<%= @apps.appl_store %>
-			</p>
-
-			<p>
-				<strong>Google Play Store:</strong>
-				<%= @apps.andr_plat %><br>
-				<weak>Price:</weak>
-				<%= @apps.andr_price %><br>
-				<weak>Version:</weak>
-				<%= @apps.andr_vers %><br>
-				<weak>Link:</weak>
-				<%= @apps.andr_store %>
-			</p>
-
-			<p>
-				<strong>Windows Store:</strong>
-				<%= @apps.wind_plat %><br>
-				<weak>Price:</weak>
-				<%= @apps.wind_price %><br>
-				<weak>Version:</weak>
-				<%= @apps.wind_vers %><br>
-				<weak>Link:</weak>
-				<%= @apps.wind_store %>
-				
-			</p>
-		</div>
-
-		<div id = midupper>
-			<p id = name>
-				<strong><%= @apps.name %></strong>
-			</p>
-			<div id = applogo><img src="<%= @apps.appl_store %>", width="250" , height="250"> </img></div>
+	<div id = table>
+		<div id = toprow>
 			
+			<div id = leftupper>
+				<p>
+					<strong>Apple Store:</strong>
+					<%= @apps.appl_plat %><br>
+					<weak>Price:</weak>
+					<%= @apps.appl_price %><br>
+					<weak>Version:</weak>
+					<%= @apps.appl_vers %><br>
+					<weak>Link:</weak>
+					<%= @apps.appl_store %>
+				</p>
+
+				<p>
+					<strong>Google Play Store:</strong>
+					<%= @apps.andr_plat %><br>
+					<weak>Price:</weak>
+					<%= @apps.andr_price %><br>
+					<weak>Version:</weak>
+					<%= @apps.andr_vers %><br>
+					<weak>Link:</weak>
+					<%= @apps.andr_store %>
+				</p>
+
+				<p>
+					<strong>Windows Store:</strong>
+					<%= @apps.wind_plat %><br>
+					<weak>Price:</weak>
+					<%= @apps.wind_price %><br>
+					<weak>Version:</weak>
+					<%= @apps.wind_vers %><br>
+					<weak>Link:</weak>
+					<%= @apps.wind_store %>
+				</p>
+			</div>
+
+			<div id = midupper>
+				<p id = name>
+					<strong><%= @apps.name %></strong>
+				</p>
+
+				<div id = applogo>
+					<img src= <%= @apps.logo %>, width="250", height="250"/> 
+				</div>
+			</div>
+
+			<div id = rightupper>
+				<p>
+					<strong>Developer:</strong>
+					<%= @apps.developer %>
+				</p>
+
+				<p>
+					<strong>Catagory:</strong>
+					<%= @apps.catagory %>
+				</p>
+			</div>
 		</div>
-
-
-
-		<div id = rightupper>
+	</div>
+	
+	
+	<div id = descriptionrow>
+		<div id = drow>
 			<p>
-				<strong>Developer:</strong>
-				<%= @apps.developer %>
+				<strong>Description:</strong>
 			</p>
-
-			<p>
-				<strong>Catagory:</strong>
-				<%= @apps.catagory %>
+				<p style = margin-left:45px;>
+				<%= @apps.description %>
 			</p>
 		</div>
 	</div>
-</div>
-	
-	
-<div id = descriptionrow>
-	<div id = drow>
-		<p>
-			<strong>Description:</strong>
-		</p>
-		<p style = margin-left:45px;>
-			<%= @apps.description %>
-		</p>
+
+	<div id = picsrow>
+  		<h1>Screenshots</h1>
+
+  		<img src= <%= @apps.pic1 %>, width="250", height="250"/> 
+  		<img src= <%= @apps.pic2 %>, width="250", height="250"/> 
+  		<img src= <%= @apps.pic3 %>, width="250", height="250"/> 
+  		<img src= <%= @apps.pic4 %>, width="250", height="250"/> 
+  		<img src= <%= @apps.pic5 %>, width="250", height="250"/> 
 	</div>
-</div>
 
-<div id = picsrow>
-  <h1>Screenshots</h1>
+	<div id = divider></div>
 
-</div>
-
-<div id = divider></div>
-
-<div id = comments>
+	<div id = comments>
+  		<h2>Add a comment:</h2>
+		
+		<%= form_for([@apps, @apps.comments.build]) do |f| %>
+  		
+  			<p>
+    			<%= f.label :commenter %><br>
+    			<%= f.text_field :commenter %>
+  			</p>
+  		
+  			<p>
+    			<%= f.label :body %><br>
+    			<%= f.text_area :body,:size => "200x5" %>
+  			</p>
   
-  <h2>Add a comment:</h2>
-<%= form_for([@apps, @apps.comments.build]) do |f| %>
-  <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body,:size => "200x5" %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+  			<p>
+    			<%= f.submit %>
+  			</p>
+		<% end %>
   
-	<h1>Comments</h1>
-	<% @apps.comments.each do |comment| %>
-	<table id = commenttable style = "width: 98%">
-	    <tr>
-			<td><p>
-				<strong>Commenter:</strong>
-				<%= comment.commenter %>
-			</p></td>
-		</tr>
-		<tr>
-			<td><p>
-				<strong>Comment:</strong>
-				<%= comment.body %>
-			</p></td>
-		</tr>
-	</table>
-	<% end %>
-	
-	
-
-  
-</div>
-
-
+		<h1>Comments</h1>
+		<% @apps.comments.each do |comment| %>
+			<table id = commenttable style = "width: 98%">
+	    		<tr>
+				<td><p>
+					<strong>Commenter:</strong>
+					<%= comment.commenter %>
+				</p></td>
+				</tr>
+			
+				<tr>
+				<td><p>
+					<strong>Comment:</strong>
+					<%= comment.body %>
+				</p></td>
+				</tr>
+			</table>
+		<% end %>
+	</div>
 </div>
