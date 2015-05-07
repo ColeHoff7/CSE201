@@ -8,15 +8,16 @@
 	
 	var hotAppsSlides = new Array()
 	hotAppsSlides[0] = new Image()
-	hotAppsSlides[0].src = "http://images2.fanpop.com/images/photos/3500000/Bunny-baby-bunny-3518600-500-583.jpg"
-	hotAppsSlides[1] = new Image()
-	hotAppsSlides[1].src = "http://ak-hdl.buzzfed.com/static/enhanced/webdr01/2013/5/29/10/enhanced-buzz-18742-1369837724-0.jpg"
-	hotAppsSlides[2] = new Image()
-	hotAppsSlides[2].src = "http://cdn.cutestpaw.com/wp-content/uploads/2013/06/l-A-cute-lil-froggy.jpg"
-	hotAppsSlides[3] = new Image()
-	hotAppsSlides[3].src = "http://www.ggwallpaper.com/file/1559/600x338/16:9/very-cute-baby-kitty_1912249061.jpg"
-	hotAppsSlides[4] = new Image()
-	hotAppsSlides[4].src = "http://thedailycannibal.com/wp-content/uploads/2012/03/666.jpg"
+	hotAppsSlides[0].src = ""@apps.1.logo""
+	//"http://images2.fanpop.com/images/photos/3500000/Bunny-baby-bunny-3518600-500-583.jpg"
+	//hotAppsSlides[1] = new Image()
+	//hotAppsSlides[1].src = "http://ak-hdl.buzzfed.com/static/enhanced/webdr01/2013/5/29/10/enhanced-buzz-18742-1369837724-0.jpg"
+	//hotAppsSlides[2] = new Image()
+	//hotAppsSlides[2].src = "http://cdn.cutestpaw.com/wp-content/uploads/2013/06/l-A-cute-lil-froggy.jpg"
+	//hotAppsSlides[3] = new Image()
+	//hotAppsSlides[3].src = "http://www.ggwallpaper.com/file/1559/600x338/16:9/very-cute-baby-kitty_1912249061.jpg"
+	//hotAppsSlides[4] = new Image()
+	//hotAppsSlides[4].src = "http://thedailycannibal.com/wp-content/uploads/2012/03/666.jpg"
 	
 	var topGamesSlides = new Array()
 	topGamesSlides[0] = new Image()
@@ -30,18 +31,14 @@
 	topGamesSlides[4] = new Image()
 	topGamesSlides[4].src = "http://www.theforce.net/swtc/Pix/dvd/zs/rotj/unmasked3.jpg"
 	
-	//var editorsPicsSlides = new Array()
-	//editorsPicsSlides[0] = new Image()
-	//editorsPicsSlides[1] = new Image()
-	//editorsPicsSlides[2] = new Image()
-	//editorsPicsSlides[3] = new Image()
-	//editorsPicsSlides[4] = new Image()
+	
 	
 	</script>
 </head>
 
 <body>
 	<div id=top>
+	
 		<a href = "welcome"><%= image_tag "header_logo.png" %></a>
 		
 		<div id=log>
@@ -59,7 +56,10 @@
 		</div>
 	</div>
 
-	<div id=nav>
+
+	
+
+	<div id=nav tabindex="0" class="onclick-menu">
 		<p> <strong>Navigation</strong> </p>
 		<ul id=cats>
 			
@@ -67,7 +67,9 @@
 
 			<li><a href="#">iOS</a></li>
 			<ul class=subcats>
-				<li><a href="#">Games</a></li>
+				<li><label for="toggle-1">I'm a toggle</label></li>
+				<input type="checkbox" id="toggle-1">
+				<navi>I'm controlled by toggle, no javascript.</navi>
 				<li><a href="#">Education</a></li>
 				<li><a href="#">Food & Drink</a></li>
 				<li><a href="#">Health & Fitness</a></li>
@@ -114,51 +116,18 @@
 				<li><a href="#">Misc.</a></li>
 			</ul>
 		</ul>
-	</div>
+	</div> 
+
 	
 	
 	<div id = content>
 	<div id=hot>
 		<div class=top2>
 			<p class=titles>Hot Apps</p>
-			<a href="javascript:slidelink1()"><img src="http://thedailycannibal.com/wp-content/uploads/2012/03/666.jpg" id="slide0" width="500" height="400" style="PADDING-LEFT: 40px; PADDING-TOP: 73px"/></a>
-			<script type="text/javascript">
-			var step1 = 0
-			var currentImage1 = 0
-			function nextImage(){
 			
-				if (!document.images)
-					return
-
-				document.getElementById('slide0').src = hotAppsSlides[step1].src		
-				currentImage1 = step1
-	
-				if(step1<4){
-					step1++
-				}
-				else{
-					step1=0
-				}
-				setTimeout("nextImage()", 2500)
-			}
-			
-			function slidelink1(){
-			
-			if (currentImage == 0)
-				window.location = "google.com"
-			else if(currentImage1 == 1)
-				window.location = "writtenkitten.net"
-			else if(currentImage1 == 2)
-				window.location = "firstpersonlover.com"
-			else if(currentImage1 == 3)
-				window.location = "4chan.org"
-			else if(currentImage1 == 4)
-				window.location = "yahoo.com"
-				
-			}
-			
-			nextImage()
-			</script>
+			<a href="#"><img src="http://thedailycannibal.com/wp-content/uploads/2012/03/666.jpg"   width="400" height="400" style="PADDING-LEFT: 20px;"/></a>
+			<a href="#"><img src="http://thedailycannibal.com/wp-content/uploads/2012/03/666.jpg"   width="400" height="400" style="PADDING-LEFT: 10px; PADDING-TOP: 73px"/></a>
+			<a href="#"><img src="http://thedailycannibal.com/wp-content/uploads/2012/03/666.jpg"   width="400" height="400" style="PADDING-LEFT: 10px; PADDING-TOP: 73px"/></a>
 			
 		</div>
 	</div>
@@ -166,50 +135,18 @@
 	<div id=topgames>
 		<div class=top2>
 			<p class=titles>Top Games</p>
-			<a href="javascript:slidelink2()"><img src="http://static.businessinsider.com/image/50a3c2e4eab8eaeb5200000c/image.jpg" id="slide1" width="500" height="400" style="PADDING-LEFT: 40px; PADDING-TOP: 73px"/></a>
-			<script type="text/javascript">
-			var step2 = 0
-			var currentImage2 = 0
-			function nextImage2(){
-			
-				if (!document.images)
-					return
-
-				document.getElementById('slide1').src = topGamesSlides[step2].src		
-				currentImage = step2
-	
-				if(step2<4){
-					step2++
-				}
-				else{
-					step2=0
-				}
-				setTimeout("nextImage()", 2500)
-			}
-			
-			function slidelink2(){
-			
-			if (currentImage == 0)
-				window.location = "google.com"
-			else if(currentImage == 1)
-				window.location = "writtenkitten.net"
-			else if(currentImage == 2)
-				window.location = "firstpersonlover.com"
-			else if(currentImage == 3)
-				window.location = "4chan.org"
-			else if(currentImage == 4)
-				window.location = "yahoo.com"
-				
-			}
-			
-			nextImage()
-			</script>
+			<a href="#"><img src="http://static.businessinsider.com/image/50a3c2e4eab8eaeb5200000c/image.jpg"  width="400" height="400" style="PADDING-LEFT: 20px;"/></a>
+			<a href="#"><img src="http://static.businessinsider.com/image/50a3c2e4eab8eaeb5200000c/image.jpg"  width="400" height="400" style="PADDING-LEFT: 20px; PADDING-TOP: 73px"/></a>
+			<a href="#"><img src="http://static.businessinsider.com/image/50a3c2e4eab8eaeb5200000c/image.jpg"  width="400" height="400" style="PADDING-LEFT: 20px; PADDING-TOP: 73px"/></a>
 		</div>
 	</div>
 	
 	<div id=editors>
 		<div class=top2>
 			<p class = titles>Editors Pics</p>
+			<a href="#"><img src="http://i3.kym-cdn.com/entries/icons/facebook/000/001/030/dickbutt.jpg"  width="400" height="400" style="PADDING-LEFT: 20px;"/></a>
+			<a href="#"><img src="http://i3.kym-cdn.com/entries/icons/facebook/000/001/030/dickbutt.jpg"  width="400" height="400" style="PADDING-LEFT: 20px; PADDING-TOP: 73px"/></a>
+			<a href="#"><img src="http://i3.kym-cdn.com/entries/icons/facebook/000/001/030/dickbutt.jpg"  width="400" height="400" style="PADDING-LEFT: 20px; PADDING-TOP: 73px"/></a>
 		</div>
 	</div>
 	

@@ -135,13 +135,13 @@ html>body #menu LI UL LI UL { left: 75px; }
   text-decoration: none;
 }
 
-#nav a:hover {
+#nav a:active {
   color:Gray;
   text-shadow: 2px 2px #000000;
    
 }
 
-#nav li:hover  + .subcats {  
+#nav li:active  + .subcats {  
   display: list-item;
   background-color: #56006B;
   transition-delay: 10s;
@@ -242,5 +242,30 @@ body{
 #top img{
   width: 14em;
   height: 6.25em;
+  
+input[type=checkbox]{
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+
+}
+
+label {
+	-webkit-appearance: push-button;
+	-moz-appearance: button;
+	display: inline-block;
+	margin: 60px 0 10px 0;
+	cursor: pointer;
+	color: white;
+
+}
+
+navi{
+color: black;
+}
+ 
+input[type=checkbox]:check ~ navi {
+color: green;
+}
 
 }
