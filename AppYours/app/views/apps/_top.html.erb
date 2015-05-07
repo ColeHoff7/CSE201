@@ -1,17 +1,18 @@
 <a href = "/welcome"><%= image_tag "header_logo.png" %></a>
 
-<div id=log>
+
 	<ul id=login>
 		<li><%= link_to 'Submit New App', new_app_path %></li>
-		<li><a href="#">Login</a></li>
-		<li><a href="#">Sign Up</a></li>
+		<li><a href="/users">Login</a></li>
+		<li><a href="/users/new">Sign Up</a></li>
 	</ul>
-</div>
 
 <div id=search>
-	<%= form_tag("/search", method: "get") do, size: "5x5" %>
-	  
+	<%= form_tag("/search", method: "get", size: "5x5") do %>
+
 	  <%= text_field_tag(:q) %>
 	  <%= submit_tag("Search") %>
 	<% end %>
+
+	
 </div>

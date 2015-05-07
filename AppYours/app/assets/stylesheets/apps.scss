@@ -56,7 +56,7 @@
   box-sizing:border-box;
   float: right;
   margin-top:35px;
-  margin-right: 25%;
+  margin-right: 0em;
 }
 
 #search p{
@@ -66,6 +66,19 @@
   color: gray;
 }
 
+#login{
+  text-align: center;
+  margin-left:30em;
+  margin-top: 3em;
+}
+
+#signup{
+  margin-left: 20em;
+}
+
+#logintitle{
+  margin-left: 20em;
+}
 
 #form{
   position:relative;
