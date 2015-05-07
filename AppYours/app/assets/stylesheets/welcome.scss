@@ -51,20 +51,21 @@
 
 #search{ /*temporary search bar*/;
   height: 2.5em /*40px;*/;
-  width: 39em /*500px;*/;
+  width: 40em /*500px;*/;
 
-  display:inline-block;
+
  /* border-width: 1px;
   border-style: solid;
   border-radius: 10px;
   border-color: #000000;*/
-  float: right;
+  
   
   margin-top: 2.188em /*35px;*/;
-  margin-left: 5em;
+  margin-left: 8em;
 }
 
 #search input {
+
     color: #999;
     font-weight: bold;
     font-size: 24px;
