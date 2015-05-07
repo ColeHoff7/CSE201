@@ -3,8 +3,14 @@
 
 	<ul id=login>
 		<li><%= link_to 'Submit New App', new_app_path %></li>
-		<li><a href="/users">Login</a></li>
-		<li><a href="/users/new">Sign Up</a></li>
+		<% if logged_in? %>
+		    <li><a href=/users>Users</a></li>
+			<li><%= link_to "Profile", current_user %></li>
+			<li> <%= link_to "Log out", logout_path, method: :delete %></li>
+		<% else %>
+			<li><a href="/login">Login</a></li>
+			<li><a href="/users/new">Sign Up</a></li>
+		<% end %>
 	</ul>
 
 <div id=search>

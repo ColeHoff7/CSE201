@@ -5,13 +5,13 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-  
+  resources :users
   
   resources :apps do
     resources :comments
   end 
   
-  resources :users
+  
   #this one line above contains all of the routing we need
   #get 'users/new'
   #get 'users/delete'
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   
   
   
-  
+  get '/logout'=>'welcome#index'
   get 'apps/create'
   get 'apps/index'
   get 'apps/show'
