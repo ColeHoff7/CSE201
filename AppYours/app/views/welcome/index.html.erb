@@ -43,50 +43,13 @@
 	<div id=nav>
 		<%= render 'side' %>
 	</div>
-	
-	
-	<div id = content>
-	<div id=hot>
-		<div class=top2>
-			<p class=titles>Hot Apps</p>
-			<a href="javascript:slidelink()"><img src="" id="slide0" width="500" height="400" style="PADDING-LEFT: 40px; PADDING-TOP: 73px"/></a>
-			<script type="text/javascript">
-			var step = 0
-			var currentImage = 0
-			function nextImage(){
-			
-				if (!document.images)
-					return
 
-				document.getElementById('slide0').src = hotAppsSlides[step].src		
-				currentImage = step
-	
-				if(step<4){
-					step++
-				}
-				else{
-					step=0
-				}
-				setTimeout("nextImage()", 2500)
-			}
+	<div id = content>
+		<div id=hot>
+			<div class=top2>
+				<p class=titles>Hot Apps</p>
 			
-			function slidelink(){
-			
-			if (currentImage == 0)
-				window.location = "/apps/1"
-			else if(currentImage == 1)
-				window.location = "/apps/2"
-			else if(currentImage == 2)
-				window.location = "/apps/3"
-			else if(currentImage == 3)
-				window.location = "/apps/4"
-			else if(currentImage == 4)
-				window.location = "/apps/5"
-				
-			}
-			
-			nextImage()
-			</script>
+				<img src= 'http://i.imgur.com/E0IHI6u.jpg', width="250", height="250"/> 
 			
 		</div>
 	</div>
@@ -94,6 +57,8 @@
 	<div id=topgames>
 		<div class=top2>
 			<p class=titles>Top Games</p>
+
+			<img src='http://i.imgur.com/t2bLV7D.jpg' , width="250", height="250"/>
 		</div>
 	</div>
 	
